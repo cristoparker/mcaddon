@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>mcaddon.net - Coming Soon</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #171717;
+            background: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(100% - 40px, 1080px);
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+
+        header {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        nav {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #16a34a;
+        }
+
+        .status {
+            font-size: 12px;
+            font-weight: 500;
+            color: #737373;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            background: #22c55e;
+            border-radius: 50%;
+        }
+
+        /* Main content */
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .hero {
+            width: 100%;
+            text-align: center;
+        }
+
+        .label {
+            display: inline-block;
+            padding: 8px 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            color: #525252;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 28px;
+        }
+
+        h1 {
+            font-size: clamp(40px, 6vw, 68px);
+            font-weight: 800;
+            letter-spacing: -3px;
+            line-height: 1.12;
+            margin-bottom: 22px;
+        }
+
+        h1 span {
+            color: #16a34a;
+        }
+
+        .description {
+            max-width: 540px;
+            margin: 0 auto;
+            color: #737373;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* Features */
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: left;
+        }
+
+        .feature {
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            padding: 24px;
+            transition: border-color 0.2s;
+        }
+
+        .feature:hover {
+            border-color: #86efac;
+        }
+
+        .feature h2 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 13px;
+            color: #737373;
+            line-height: 1.8;
+        }
+
+        /* Launch date */
+
+        .launch {
+            display: inline-block;
+            padding: 18px 28px;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .launch-label {
+            display: block;
+            color: #737373;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            margin-bottom: 8px;
+        }
+
+        .launch-date {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        /* Footer */
+
+        footer {
+            border-top: 1px solid #f0f0f0;
+            padding: 24px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .copyright,
+        .powered {
+            font-size: 12px;
+            color: #737373;
+        }
+
+        .powered a {
+            color: #171717;
+            font-weight: 600;
+        }
+
+        .powered a:hover {
+            color: #16a34a;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 640px) {
+            nav {
+                height: 64px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .status {
+                font-size: 11px;
+            }
+
+            main {
+                padding: 65px 0;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin: 36px auto;
+            }
+
+            .feature {
+                padding: 20px;
+            }
+
+            .launch {
+                padding: 16px 22px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">mcaddon<span>.net</span></a>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Coming soon
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container hero">
+
+            <div class="label">BUILT FOR MINECRAFT CREATORS</div>
+
+            <h1>
+                Build. Share.<br>
+                <span>Modify.</span>
+            </h1>
+
+            <p class="description">
+                A new home for Minecraft addons is coming.
+                Discover creations, share your own work, and
+                explore new ways to modify your Minecraft world.
+            </p>
+
+            <div class="features">
+                <div class="feature">
+                    <h2>Build</h2>
+                    <p>Create new experiences and bring your Minecraft addon ideas to life.</p>
+                </div>
+
+                <div class="feature">
+                    <h2>Share</h2>
+                    <p>Publish your creations and share them with the community.</p>
+                </div>
+
+                <div class="feature">
+                    <h2>Modify</h2>
+                    <p>Explore addons and make your Minecraft experience your own.</p>
+                </div>
+            </div>
+
+            <div class="launch">
+                <span class="launch-label">OFFICIAL LAUNCH</span>
+                <span class="launch-date">October 9, 2026</span>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <p class="copyright">
+                © 2026 mcaddon.net
+            </p>
+
+            <p class="powered">
+                Powered by
+                <a href="https://renderphoenix.com"
+                   target="_blank"
+                   rel="noopener noreferrer">RenderPhoenix</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
